@@ -1,4 +1,6 @@
-# Python Multiple Choice Quiz Application with possible multiple correct answers and a simple GUI
+# tkinter-quiz
+
+a Python Multiple Choice Quiz Application with possible multiple correct answers and a simple GUI
 
 The Application is a simple multiple choice quiz program built with Python and Tkinter. The application loads questions and answer options from a YAML file, allows users to select their answers, and provides immediate feedback on their choices. It also supports an option to exit the quiz at any time.
 
@@ -47,7 +49,7 @@ The application uses the Tkinter library for its graphical user interface and ra
 The structure of the project directory is as follows:
 
 ``` filesystem
-python-quiz-application/
+tkinter-quiz/
   ├── main.py
   ├── questions.yaml
   └── README.md
