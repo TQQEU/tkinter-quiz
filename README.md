@@ -40,6 +40,13 @@ The application uses the Tkinter library for its graphical user interface and ra
    python main.py
    ```
 
+  ``` help
+  options:
+    -h, --help            show this help message and exit
+    -i INPUTFILE, --input INPUTFILE
+                          specify a .yaml-file to quiz from, defaults to `questions.yaml` if not specified
+  ```
+
 6. Answer each question by selecting the checkboxes next to the answer options. Once you've made your selections, click the "Select" button to see the evaluation results. Questions will appear in random order. Also Answers will appear in random order.
 
 7. After the evaluation is displayed, click "OK" to proceed to the next question or exit the application.
