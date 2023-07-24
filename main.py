@@ -49,8 +49,6 @@ def on_exit_click():
     print("Exiting the program as per user request")
     exit()
 
-inputfile = "questions.yaml" #default
-
 parser=argparse.ArgumentParser(description='A multiple-choice-multiple-answer quiz using tkinter for GUI')
 parser.add_argument('-i', '--input', type=str, dest="inputfile", required=False, help='specify a .yaml-file to quiz from')
 
@@ -58,7 +56,11 @@ args = parser.parse_args()
 
 # Path to the YAML file
 print("Loading questions...")
-file_path = inputfile
+
+if (args.inputfile == None):
+    file_path = 'questions.yaml'
+else:
+    file_path = args.inputfile
 
 with open(file_path, 'r') as file:
     myQuestions = yaml.safe_load(file)
@@ -66,7 +68,7 @@ with open(file_path, 'r') as file:
 print("Processing questions...")
 random.shuffle(myQuestions)
 
-print("Loaded successfully")
+print("Loaded " + file_path + " successfully")
 
 for question in myQuestions:
     this_answers = []
